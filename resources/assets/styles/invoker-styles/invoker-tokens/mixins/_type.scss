@@ -1,0 +1,146 @@
+@mixin primary-color() {
+  color: $dark-alpha-70;
+}
+
+@mixin secondary-color() {
+  color: $dark-alpha-50;
+}
+
+@mixin accent-primary() {
+  color: $brand-primary-200;
+}
+
+@mixin accent-secondary() {
+  color: $brand-primary-80;
+}
+
+@mixin white() {
+  color: $light-alpha-100;
+}
+
+@mixin white-secondary() {
+  color: $light-alpha-80;
+}
+
+// Display Text
+@mixin display1() {
+  font-size: $display-1;
+  line-height: $line-reset;
+  letter-spacing: -0.96px;
+  font-weight: $extrabold;
+}
+@mixin display2() {
+  font-size: $display-2;
+  line-height: $line-reset;
+  letter-spacing: -0.96px;
+  font-weight: $extrabold;
+}
+@mixin display3() {
+  font-size: $display-3;
+  line-height: $line-reset;
+  letter-spacing: -0.96px;
+  font-weight: $extrabold;
+}
+
+// Heading Text
+@mixin heading1() {
+  font-family: "Inter";
+  font-size: $heading-1;
+  line-height: 52px;
+  letter-spacing: -0.64px;
+  font-weight: $bold;
+}
+@mixin heading2() {
+  font-size: $heading-2;
+  line-height: 36px;
+  letter-spacing: -0.64px;
+  font-weight: $bold;
+}
+@mixin heading3() {
+  font-size: $heading-3;
+  line-height: 30px;
+  letter-spacing: -0.64px;
+  font-weight: $bold;
+}
+@mixin heading4() {
+  font-size: $heading-4;
+  line-height: 26px;
+  letter-spacing: -0.48px;
+  font-weight: $bold;
+}
+@mixin heading4Alt() {
+  font-size: $heading-4;
+  line-height: 26px;
+  letter-spacing: -0.48px;
+  font-weight: $medium;
+}
+@mixin heading5() {
+  font-size: $heading-5;
+  line-height: 22px;
+  letter-spacing: -0.24px;
+  font-weight: $medium;
+}
+@mixin heading5Alt() {
+  font-size: $heading-5;
+  line-height: 22px;
+  letter-spacing: -0.24px;
+  font-weight: $bold;
+}
+@mixin heading6() {
+  font-size: $heading-6;
+  line-height: 18px;
+  letter-spacing: -0.12px;
+  font-weight: $medium;
+}
+@mixin heading6Alt() {
+  font-size: $heading-6;
+  line-height: 18px;
+  letter-spacing: -0.12px;
+  font-weight: $bold;
+}
+
+// Body Text
+@mixin large() {
+  font-size: $body-3;
+  line-height: 26px;
+  font-weight: $regular;
+}
+@mixin medium() {
+  font-size: $body-2;
+  line-height: 22px;
+  font-weight: $regular;
+}
+@mixin small() {
+  font-size: $body-1;
+  line-height: 18px;
+  font-weight: $regular;
+}
+
+// Captions
+@mixin captionBold() {
+  font-size: $caption-1;
+  font-weight: $medium;
+  text-transform: uppercase;
+  line-height: 16px;
+}
+@mixin caption() {
+  font-size: $caption-1;
+  font-weight: $regular;
+  line-height: 16px;
+}
+
+// Label
+@mixin label() {
+  color: $dark-alpha-70;
+  font-weight: $medium;
+  margin: $space-stack-s;
+  font-size: $heading-6;
+  line-height: 18px;
+}
+@mixin labelAlt() {
+  color: $dark-alpha-70;
+  font-weight: $medium;
+  margin: $space-stack-s;
+  font-size: $heading-5;
+  line-height: 22px;
+}

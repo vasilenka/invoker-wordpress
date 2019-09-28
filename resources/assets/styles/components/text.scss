@@ -1,0 +1,88 @@
+.display1 {
+  @include display1();
+}
+.display2 {
+  @include display2();
+}
+.display3 {
+  @include display3();
+}
+
+.heading1 {
+  @include heading1();
+}
+.heading2 {
+  @include heading2();
+}
+.heading3 {
+  @include heading3();
+}
+.heading4 {
+  @include heading4();
+}
+.heading5 {
+  @include heading5();
+}
+.heading6 {
+  @include heading6();
+}
+
+.dark {
+  @include primary-color();
+}
+
+.secondary {
+  @include secondary-color();
+}
+
+.accent {
+  @include accent-primary();
+}
+
+.accent-secondary {
+  @include accent-secondary();
+}
+
+.white {
+  @include white();
+}
+
+.white-secondary {
+  @include white-secondary();
+}
+
+.thin {
+  font-weight: $thin;
+}
+
+.light {
+  font-weight: $light;
+}
+
+.book {
+  font-weight: $book;
+}
+
+.regular {
+  font-weight: $regular;
+}
+
+.medium {
+  font-weight: $medium;
+}
+
+.semibold {
+  font-weight: $semibold;
+}
+
+.bold {
+  font-weight: $bold;
+}
+
+.extrabold {
+  font-weight: $extrabold;
+}
+
+.black {
+  font-weight: $heavy;
+}
