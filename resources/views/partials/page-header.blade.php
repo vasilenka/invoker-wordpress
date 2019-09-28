@@ -1,3 +1,5 @@
-<div class="page-header">
-  <h1>{!! App::title() !!}</h1>
-</div>
+@Container
+  <div class="page-header">
+    <h1>{!! App::title() !!}</h1>
+  </div>
+@endContainer

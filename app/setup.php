@@ -44,7 +44,9 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'secondary_navigation' => __('Secondary Navigation', 'sage'),
+        'footer_navigation' => __('Footer Navigation', 'sage')
     ]);
 
     /**
@@ -104,6 +106,17 @@ add_action('the_post', function ($post) {
  * Setup Sage options
  */
 add_action('after_setup_theme', function () {
+
+    // Add support for logo
+    $defaults = array(
+        'height'      => 100,
+        'width'       => 400,
+        'flex-height' => true,
+        'flex-width'  => true,
+        'header-text' => array( 'site-title', 'site-description' ),
+    );
+    add_theme_support( 'custom-logo', $defaults );
+
     /**
      * Add JsonManifest to Sage container
      */
@@ -134,4 +147,5 @@ add_action('after_setup_theme', function () {
     // Register Component
     sage('blade')->compiler()->component('components.text', 'Text');
     sage('blade')->compiler()->component('components.container', 'Container');
+    sage('blade')->compiler()->component('components.segment', 'Segment');
 });

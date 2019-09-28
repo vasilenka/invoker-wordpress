@@ -1,0 +1,26 @@
+.segment {
+  @include screen(smallPhone) {
+    padding-top: $space-ml;
+    padding-bottom: $space-ml;
+  }
+  @include screen(phone) {
+    padding-top: $space-ml;
+    padding-bottom: $space-ml;
+  }
+  @include screen(tablet) {
+    padding-top: $space-ll;
+    padding-bottom: $space-ll;
+  }
+  @include screen(tabletLandscape) {
+    padding-top: $space-xl;
+    padding-bottom: $space-xl;
+  }
+  @include screen(desktop) {
+    padding-top: $space-xl;
+    padding-bottom: $space-xl;
+  }
+  @include screen(desktopWide) {
+    padding-top: $space-huge;
+    padding-bottom: $space-huge;
+  }
+}

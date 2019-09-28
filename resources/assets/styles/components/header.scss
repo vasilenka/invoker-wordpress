@@ -1,8 +1,9 @@
 @import "./../tokens.scss";
 
-.banner {
+.page-navigation {
   width: 100%;
   background-color: $bg-dust-100;
+  background-color: $brand-secondary-200;
 }
 
 .brand {
@@ -12,5 +13,92 @@
 }
 
 .nav-primary {
-  padding: $space-vertical-ml;
+
+  & .nav-primary-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+.brand {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  & .logo {
+    height: 40px;
+  }
+}
+
+.menu-primary-container {
+
+  & .primary_navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+
+    & .menu-item {
+
+      &:not(:last-child) {
+        margin-right: $space-ll;
+      }
+
+      > a {
+        @include captionAlt();
+        display: block;
+        padding: 28px 0;
+        color: $light-hex-100;
+        text-transform: uppercase;
+        font-weight: $semibold;
+      }
+
+      &.current-menu-item {
+        box-shadow: inset 0px -3px 0px 0px $dark-hex-80;
+        transition: all .28s;
+      }
+
+      &:hover {
+        box-shadow: inset 0px -3px 0px 0px $dark-hex-80;
+        transition: all .28s;
+      }
+
+    }
+  }
+
+}
+
+
+.menu-secondary-container {
+  background-color: #FFFFFF;
+  @include container();
+  box-shadow: 0 2px 4px -1px $dark-alpha-20;
+}
+
+.secondary_navigation {
+  display: flex;
+  align-items: baseline;
+
+  & .menu-item {
+
+    margin-right: $space-l;
+    transition: all .36s;
+
+    > a {
+      display: block;
+      padding: $space-m 0;
+      color: $dark-hex-80;
+      @include heading6();
+    }
+
+    &.current-menu-item {
+      box-shadow: inset 0px -3px 0px 0px $brand-primary-200;
+      transition: all .28s;
+    }
+
+    &:hover {
+      box-shadow: inset 0px -3px 0px 0px $brand-primary-200;
+      transition: all .28s;
+    }
+  }
 }

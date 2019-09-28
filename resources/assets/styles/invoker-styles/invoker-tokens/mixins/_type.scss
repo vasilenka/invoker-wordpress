@@ -117,16 +117,13 @@
 }
 
 // Captions
-@mixin captionBold() {
-  font-size: $caption-1;
-  font-weight: $medium;
-  text-transform: uppercase;
+@mixin captionAlt() {
+  font-size: $caption-2;
   line-height: 16px;
 }
 @mixin caption() {
   font-size: $caption-1;
-  font-weight: $regular;
-  line-height: 16px;
+  line-height: 12px;
 }
 
 // Label
