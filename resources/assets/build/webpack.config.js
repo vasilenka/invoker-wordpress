@@ -1,5 +1,8 @@
 "use strict"; // eslint-disable-line
 
+const glob = require('glob')
+const path = require('path')
+
 const webpack = require("webpack");
 const merge = require("webpack-merge");
 const CleanPlugin = require("clean-webpack-plugin");
@@ -11,13 +14,27 @@ const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const desire = require("./util/desire");
 const config = require("./config");
 
+const autoprefixer = require('autoprefixer')
+const cssnano = require('cssnano')
+const postCssModules = require('postcss-modules')
+
+// style files regexes
+const cssRegex = /\.css$/;
+const cssModuleRegex = /\.module\.css$/;
+const sassRegex = /\.(scss|sass)$/;
+const sassModuleRegex = /\.module\.(scss|sass)$/;
+
 const assetsFilenames = config.enabled.cacheBusting
   ? config.cacheBusting
   : "[name]";
 
+const cssnanoConfig = {
+  preset: ["default", { discardComments: { removeAll: true } }]
+};
+
 let webpackConfig = {
   context: config.paths.assets,
-  entry: config.entry,
+  entry: Object.assign({}, { ...config.entry, 'dung': glob.sync(path.resolve(__dirname, './../../views/**/*.module.scss'))}),
   devtool: config.enabled.sourceMaps ? "#source-map" : undefined,
   output: {
     path: config.paths.dist,
@@ -113,6 +130,50 @@ let webpackConfig = {
           ]
         })
       },
+      // {
+      //   test: sassModuleRegex,
+      //   use: ExtractTextPlugin.extract({
+      //     fallback: "style",
+      //     use: [
+      //       { loader: "cache" },
+      //       {
+      //         loader: "css",
+      //         options: { sourceMap: config.enabled.sourceMaps }
+      //       },
+      //       {
+      //         loader: "postcss",
+      //         options: {
+      //           parser: config.enabled.optimize ? "postcss-safe-parser" : undefined,
+      //           plugins: [
+      //             autoprefixer,
+      //             cssnano({
+      //               preset: config.enabled.optimize ? ['default', {
+      //                 svgo: {
+      //                   plugins: [{
+      //                     removeDoctype: false,
+      //                   }],
+      //                 },
+      //               }] : null,
+      //             }),
+      //             postCssModules,
+      //           ],
+      //           sourceMap: config.enabled.sourceMaps
+      //         }
+      //       },
+      //       {
+      //         loader: "resolve-url",
+      //         options: { sourceMap: config.enabled.sourceMaps }
+      //       },
+      //       {
+      //         loader: "sass",
+      //         options: {
+      //           sourceMap: config.enabled.sourceMaps,
+      //           sourceComments: true
+      //         }
+      //       }
+      //     ]
+      //   })
+      // },
       {
         test: /\.(ttf|otf|eot|woff2?|png|jpe?g|gif|svg|ico)$/,
         include: config.paths.assets,
