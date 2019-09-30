@@ -1,0 +1,197 @@
+@mixin button {
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  border-style: solid;
+  letter-spacing: normal;
+  text-decoration: none;
+  border-radius: 3px;
+  font-family: $font-primary;
+  font-weight: $medium;
+  transition: all 0.36s;
+
+  > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:disabled {
+    opacity: 0.44;
+  }
+}
+
+@mixin button-stretch {
+  width: 100%;
+}
+
+// SIZES
+@mixin button-small {
+  border-width: 1px;
+  padding: 6px 16px;
+  font-size: $heading-6;
+  line-height: 22px;
+}
+@mixin button-small--alt {
+  border-width: 2px;
+  padding: 5px 15px;
+  font-size: $heading-6;
+  line-height: 22px;
+}
+@mixin button-medium {
+  border-width: 1px;
+  padding: 11px 23px;
+  font-size: $heading-5;
+  line-height: 24px;
+}
+@mixin button-medium--alt {
+  border-width: 2px;
+  padding: 10px 22px;
+  font-size: $heading-5;
+  line-height: 24px;
+}
+@mixin button-large {
+  border-width: 1px;
+  padding: 15px 31px;
+  font-size: $heading-5;
+  line-height: 24px;
+}
+@mixin button-large--alt {
+  border-width: 2px;
+  padding: 14px 30px;
+  font-size: $heading-5;
+  line-height: 24px;
+}
+
+@mixin button-default {
+  color: $dark-alpha-70;
+  border-color: $dark-hex-30;
+  background-color: $dark-hex-30;
+  &:active,
+  &:focus {
+    box-shadow: 0px 0px 0px 2.5px currentColor;
+    transition: all 0.28s;
+  }
+}
+@mixin button-default--ghost {
+  color: $dark-alpha-70;
+  border-color: $dark-alpha-50;
+  background-color: transparent;
+  &:active:not(:disabled),
+  &:focus:not(:disabled) {
+    box-shadow: 0px 0px 0px 2.5px currentColor;
+    transition: all 0.28s;
+  }
+}
+@mixin button-default--text {
+  background-color: transparent;
+  border-color: transparent;
+  color: $brand-primary-200;
+  &:active,
+  &:focus {
+    box-shadow: 0px 0px 0px 2.5px currentColor;
+    transition: all 0.28s;
+  }
+}
+
+@mixin button-primary {
+  background-color: $brand-primary-200;
+  border-color: transparent;
+  color: $light-alpha-100;
+  &:active,
+  &:focus {
+    box-shadow: 0px 0px 0px 2.5px $brand-primary-50;
+    transition: all 0.28s;
+  }
+}
+@mixin button-primary--ghost {
+  background-color: transparent;
+  border-color: $brand-primary-200;
+  color: $brand-primary-200;
+  &:active,
+  &:focus {
+    box-shadow: 0px 0px 0px 2.5px $brand-primary-30;
+    transition: all 0.28s;
+  }
+}
+@mixin button-primary--text {
+  background-color: transparent;
+  border-color: transparent;
+  color: $brand-primary-200;
+  &:hover {
+    background-color: $brand-primary-10;
+    transition: all 0.28s;
+  }
+  &:active,
+  &:focus {
+    background-color: $brand-primary-30;
+    transition: all 0.28s;
+  }
+}
+
+@mixin button-secondary {
+  background-color: $brand-secondary-100;
+  border-color: $brand-secondary-100;
+  color: $light-alpha-100;
+  &:active,
+  &:focus {
+    box-shadow: 0px 0px 0px 2.5px $brand-secondary-50;
+    transition: all 0.28s;
+  }
+}
+@mixin button-secondary--ghost {
+  background-color: transparent;
+  border-color: $brand-secondary-100;
+  color: $brand-secondary-100;
+  &:active,
+  &:focus {
+    box-shadow: 0px 0px 0px 2.5px $brand-secondary-50;
+    transition: all 0.28s;
+  }
+}
+@mixin button-secondary--text {
+  background-color: transparent;
+  border-color: transparent;
+  color: $brand-secondary-100;
+  &:hover {
+    background-color: $brand-secondary-10;
+    transition: all 0.28s;
+  }
+  &:active,
+  &:focus {
+    color: $brand-secondary-200;
+    background-color: $brand-secondary-30;
+    transition: all 0.28s;
+  }
+}
+
+@mixin button-light {
+  background-color: $light-alpha-100;
+  border-color: $light-alpha-100;
+  color: $dark-alpha-70;
+  &:active,
+  &:focus {
+    box-shadow: 0px 0px 0px 2.5px currentColor;
+    transition: all 0.28s;
+  }
+}
+@mixin button-light--ghost {
+  background-color: transparent;
+  border-color: $light-alpha-100;
+  color: $light-alpha-100;
+  &:active:not(:disabled),
+  &:focus:not(:disabled) {
+    box-shadow: 0px 0px 0px 2.5px currentColor;
+    transition: all 0.28s;
+  }
+}
+@mixin button-light--text {
+  background-color: transparent;
+  border-color: transparent;
+  color: $light-alpha-100;
+  &:active:not(:disabled),
+  &:focus:not(:disabled) {
+    box-shadow: 0px 0px 0px 2.5px currentColor;
+    transition: all 0.28s;
+  }
+}

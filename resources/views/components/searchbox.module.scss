@@ -1,0 +1,22 @@
+.searchbox {
+  height: unset;
+  display: inline-flex;
+  align-items: center;
+
+  & .searchbox__label {
+    @include heading6();
+    margin-right: $space-s;
+  }
+
+  & .searchbox__field {
+    @include field--small();
+    @include field--light();
+    margin-right: $space-s;
+  }
+
+  & .searchbox__submit {
+    @include button();
+    @include button-small--alt();
+    @include button-primary();
+  }
+}

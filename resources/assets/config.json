@@ -4,8 +4,8 @@
     "customizer": ["./scripts/customizer.js"]
   },
   "publicPath": "/wp-content/themes/invoker-wordpress",
-  "devUrl": "http://wordpress.dushi/",
-  "proxyUrl": "http://localhost:3000/",
+  "devUrl": "http://wordpress.dushi",
+  "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": ["app/**/*.php", "config/**/*.php", "resources/views/**/*.php"]
 }

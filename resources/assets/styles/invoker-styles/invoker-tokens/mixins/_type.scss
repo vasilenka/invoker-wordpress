@@ -1,24 +1,24 @@
-@mixin primary-color() {
+@mixin primary-color {
   color: $dark-alpha-70;
 }
 
-@mixin secondary-color() {
+@mixin secondary-color {
   color: $dark-alpha-50;
 }
 
-@mixin accent-primary() {
+@mixin accent-primary {
   color: $brand-primary-200;
 }
 
-@mixin accent-secondary() {
+@mixin accent-secondary {
   color: $brand-primary-80;
 }
 
-@mixin white() {
+@mixin white {
   color: $light-alpha-100;
 }
 
-@mixin white-secondary() {
+@mixin white-secondary {
   color: $light-alpha-80;
 }
 
