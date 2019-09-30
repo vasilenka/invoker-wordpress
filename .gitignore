@@ -8,6 +8,8 @@ yarn-error.log
 /vendor
 resources/assets/config-local.json
 
+.idea
+
 # Logs
 logs
 *.log

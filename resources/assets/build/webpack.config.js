@@ -1,7 +1,7 @@
 "use strict"; // eslint-disable-line
 
-const glob = require('glob')
-const path = require('path')
+const glob = require("glob");
+const path = require("path");
 
 const webpack = require("webpack");
 const merge = require("webpack-merge");
@@ -14,9 +14,9 @@ const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const desire = require("./util/desire");
 const config = require("./config");
 
-const autoprefixer = require('autoprefixer')
-const cssnano = require('cssnano')
-const postCssModules = require('postcss-modules')
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+const postCssModules = require("postcss-modules");
 
 // style files regexes
 const cssRegex = /\.css$/;
@@ -32,9 +32,11 @@ const cssnanoConfig = {
   preset: ["default", { discardComments: { removeAll: true } }]
 };
 
+// const useCssModules = {'dung': glob.sync(path.resolve(__dirname, './../../views/**/*.module.scss'))}
+
 let webpackConfig = {
   context: config.paths.assets,
-  entry: Object.assign({}, { ...config.entry, 'dung': glob.sync(path.resolve(__dirname, './../../views/**/*.module.scss'))}),
+  entry: Object.assign({}, { ...config.entry }),
   devtool: config.enabled.sourceMaps ? "#source-map" : undefined,
   output: {
     path: config.paths.dist,

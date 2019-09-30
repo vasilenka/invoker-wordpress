@@ -10,13 +10,16 @@
     {!! get_search_form(false) !!}
   @endif
 
-  @Segment
-    @Container
+  @segment
+  @endsegment
+
+  @segment
+    @container
       @while (have_posts()) @php the_post() @endphp
       @include('partials.content-'.get_post_type())
       @endwhile
-    @endContainer
-  @endSegment
+    @endcontainer
+  @endsegment
 
   {!! get_the_posts_navigation() !!}
 @endsection
