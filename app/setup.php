@@ -148,4 +148,5 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->component('components.container', 'container');
     sage('blade')->compiler()->component('components.segment', 'segment');
     sage('blade')->compiler()->component('components.searchbox', 'searchbox');
+    sage('blade')->compiler()->component('components.searchbox-full', 'searchbox-full');
 });

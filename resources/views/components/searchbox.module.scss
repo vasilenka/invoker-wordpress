@@ -20,3 +20,26 @@
     @include button-primary();
   }
 }
+
+.searchbox--full {
+  height: unset;
+  display: inline-flex;
+  align-items: center;
+
+  & .searchbox--full__label {
+    @include heading6();
+    margin-right: $space-s;
+  }
+
+  & .searchbox--full__field {
+    @include field--small();
+    @include field--light();
+    margin-right: $space-s;
+  }
+
+  & .searchbox--full__submit {
+    @include button();
+    @include button-small--alt();
+    @include button-primary();
+  }
+}

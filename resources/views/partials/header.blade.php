@@ -19,12 +19,10 @@
         </a>
       @endif
 
-      {{-- @php
-        get_search_form( )
-      @endphp --}}
-
-      @searchbox()
-      @endsearchbox
+      @if(!is_search())
+        @searchbox()
+        @endsearchbox
+      @endif
 
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu([
