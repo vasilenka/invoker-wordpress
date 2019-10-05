@@ -19,6 +19,10 @@
         </a>
       @endif
 
+      {{-- @php
+        get_search_form( )
+      @endphp --}}
+
       @searchbox()
       @endsearchbox
 
