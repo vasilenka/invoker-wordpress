@@ -1,15 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
+
+  @searchboxfull()
+  @endsearchboxfull
+
+  {{-- @include('partials.page-header') --}}
 
   @if (!have_posts())
+  @container()
     <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
+      {{ __('Sorry, no results were found for', 'sage') }}{{ ' ' }} <strong>{{get_search_query()}}</strong>{{ '.' }}
     </div>
-    {!! get_search_form(false) !!}
-    @searchboxfull
-    @endsearchboxfull
+    @endcontainer
   @endif
 
   @while(have_posts()) @php the_post() @endphp

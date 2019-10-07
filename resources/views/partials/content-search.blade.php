@@ -1,4 +1,4 @@
-@container
+@container()
   <article {{ post_class() }}>
     <header>
       @text(['as' => 'h2', 'class' => 'heading2 content-title'])
